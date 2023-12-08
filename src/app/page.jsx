@@ -1,8 +1,11 @@
+import Card from '@/components/Card'
 import React from 'react'
 
 const Home = () => {
   return (
-    <div className='max-w-6xl mx-auto'>Home</div>
+    <div className="">
+      <Card/>
+    </div>
   )
 }
 

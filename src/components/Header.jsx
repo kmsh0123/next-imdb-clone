@@ -21,7 +21,7 @@ const Header = () => {
             open ? <IoMoonSharp className="text-2xl"/> : <MdOutlineWbSunny className="text-2xl "/>
           }
           </div>
-            <span className="font-bold bg-slate-300 px-5 py-2 rounded-full text-indigo-900">IMDB</span>
+            <span className="font-bold bg-slate-300 px-5 py-2 rounded-full text-indigo-900 select-none">IMDB</span>
         </div>
       </div>
     </div>

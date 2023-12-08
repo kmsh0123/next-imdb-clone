@@ -2,7 +2,7 @@ import React from 'react'
 
 const About = () => {
   return (
-    <div>About</div>
+    <div className='max-w-6xl mx-auto'>About</div>
   )
 }
 

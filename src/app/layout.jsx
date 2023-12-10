@@ -4,6 +4,7 @@ import Header from "@/components/Header";
 import Footer from '@/components/Footer';
 import Navbar from '@/components/Navbar';
 import SearchBar from '@/components/Searchbar';
+import { Providers } from './redux/providers';
 
 
 const inter = Inter({ subsets: ['latin'] })
@@ -20,7 +21,7 @@ export default function RootLayout({ children }) {
         <Header/>
         <Navbar/>
         <SearchBar/>
-        {children}
+        <Providers>{children}</Providers>
         </body>
     </html>
   )

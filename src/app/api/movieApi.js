@@ -16,7 +16,14 @@ export const movieApi = createApi({
             }),
             providesTags:["movieApi"]
         }),
+        getDetails:(builder).query({
+            query:({id}) => ({
+                url : `/movie/${id}?api_key=bb3273d8084d88f37b5d3bc08d2b1364`,
+                method: "GET",
+            }),
+            providesTags:["movieApi"]
+        }),
     })
 })
 
-export const {useGetMoviesQuery} = movieApi;
+export const {useGetMoviesQuery,useGetDetailsQuery} = movieApi;

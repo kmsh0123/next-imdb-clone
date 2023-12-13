@@ -8,8 +8,8 @@ import { useGetMoviesQuery } from './api/movieApi'
 
 
 const Home = () => {
-  const movies = useGetMoviesQuery();
-  const mvLists = (movies?.data?.results);
+  const {data} = useGetMoviesQuery();
+  const mvLists = (data?.results);
   console.log(mvLists);
   return (
     <div className="grid grid-cols-4 max-w-6xl mx-auto">

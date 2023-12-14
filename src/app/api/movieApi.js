@@ -23,7 +23,15 @@ export const movieApi = createApi({
             }),
             providesTags:["movieApi"]
         }),
+        getSearch:(builder).query({
+            query:(user) => ({
+                url : `/search/movie?api_key=bb3273d8084d88f37b5d3bc08d2b1364&include_adult=false&language=en-US&page=1'`,
+                method: "GET",
+                body : user
+            }),
+            providesTags:["movieApi"]
+        }),
     })
 })
 
-export const {useGetMoviesQuery,useGetDetailsQuery} = movieApi;
+export const {useGetMoviesQuery,useGetDetailsQuery,useGetSearchQuery} = movieApi;

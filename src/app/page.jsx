@@ -2,9 +2,8 @@
 
 import Card from '@/components/Card'
 import React from 'react'
-import { useDispatch, useSelector } from 'react-redux'
-import { decrement, increment } from './redux/counterSlice'
 import { useGetMoviesQuery } from './api/movieApi'
+import SearchBar from '@/components/Searchbar'
 
 
 const Home = () => {

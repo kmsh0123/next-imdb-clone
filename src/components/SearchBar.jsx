@@ -1,18 +1,28 @@
 "use client"
 
-import { useGetSearchQuery } from '@/app/api/movieApi';
-import { setSearched } from '@/app/redux/movieSlice';
-import React, { useState } from 'react'
+import { useState } from "react";
+import { useRouter } from "next/navigation";
 
 const SearchBar = () => {
-    const {data} = useGetSearchQuery();
-    console.log(data);
+   const [search, setSearch] = useState("");
+  const router = useRouter();
+  function handleSubmit(e) {
+    e.preventDefault();
+    if (!search) return;
+    router.push(`/search/${search}`);
+    }
     
 return (
-    <form className='bg-blue-900 p-5 text-yellow-500 flex justify-between'>
+    <form onSubmit={handleSubmit} className='bg-blue-900 p-5 text-yellow-500 flex justify-between'>
         <input 
+        value={search}
+        onChange={(e)=>setSearch(e.target.value)}
         className='outline-none border-none bg-transparent w-full h-full' type="text" placeholder='Search....' />
-        <button type='submit'>Search</button>
+        <button
+        disabled = {!search}
+        type='submit'
+        className='disabled:text-black'
+        >Search</button>
     </form>
   )
 }

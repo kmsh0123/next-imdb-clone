@@ -3,7 +3,6 @@
 import Card from '@/components/Card'
 import React from 'react'
 import { useGetMoviesQuery } from './api/movieApi'
-import SearchBar from '@/components/Searchbar'
 
 
 const Home = () => {

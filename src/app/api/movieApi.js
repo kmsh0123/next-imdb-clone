@@ -24,10 +24,9 @@ export const movieApi = createApi({
             providesTags:["movieApi"]
         }),
         getSearch:(builder).query({
-            query:(user) => ({
-                url : `/search/movie?api_key=bb3273d8084d88f37b5d3bc08d2b1364&include_adult=false&language=en-US&page=1'`,
+            query:(query) => ({
+                url : `/search/movie?api_key=bb3273d8084d88f37b5d3bc08d2b1364&language=en-US&page=1&include_adult=false&query=${query}`,
                 method: "GET",
-                body : user
             }),
             providesTags:["movieApi"]
         }),

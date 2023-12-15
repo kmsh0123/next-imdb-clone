@@ -10,7 +10,7 @@ const Home = () => {
   const mvLists = (data?.results);
   console.log(mvLists);
   return (
-    <div className="grid grid-cols-4 max-w-6xl mx-auto">
+    <div className="sm:grid sm:grid-cols-1 md:gird md:grid-cols-4 p-5 max-w-6xl mx-auto">
      {
       mvLists?.map(mv=>(
         <Card key={mv.id} mv={mv}/>

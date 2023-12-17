@@ -5,6 +5,7 @@ import Footer from '@/components/Footer';
 import Navbar from '@/components/Navbar';
 import SearchBar from '@/components/Searchbar';
 import { Providers } from './redux/providers';
+import DarkProvider from './DarkProvider';
 
 
 const inter = Inter({ subsets: ['latin'] })
@@ -16,14 +17,16 @@ export const metadata = {
 
 export default function RootLayout({ children }) {
   return (
-    <html lang="en">
+    <html lang="en" suppressHydrationWarning={true}>
       <body className={inter.className} suppressHydrationWarning={true}>
+      <DarkProvider>
       <Providers>
         <Header/>
-        <Navbar/>
+        {/* <Navbar/> */}
         <SearchBar/>
           {children}
-          </Providers>
+      </Providers>
+      </DarkProvider>
         </body>
     </html>
   )

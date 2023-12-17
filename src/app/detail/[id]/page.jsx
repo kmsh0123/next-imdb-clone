@@ -14,7 +14,7 @@ const Detail = () => {
    <Image src = {`https://image.tmdb.org/t/p/w500/${data?.backdrop_path}`} alt = "Image not absence"
         width={300}
         height={300}
-        className="sm:rounded-t-lg group-hover:opacity-80 transition-opacity duration-200 sm:block p-5 w-full md:w-[100%]"
+        className="sm:rounded-t-lg group-hover:opacity-80 transition-opacity duration-200 sm:block pt-5 w-full md:w-[100%]"
           placeholder="blur"
           blurDataURL="/spinner.svg"
         />

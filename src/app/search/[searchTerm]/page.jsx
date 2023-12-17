@@ -8,7 +8,7 @@ const search = ({params}) => {
     const {data : movies} = useGetSearchQuery(params.searchTerm);
     console.log(movies?.results);
   return (
-    <div className='grid grid-cols-4 max-w-6xl mx-auto'>
+    <div className='sm:grid sm:grid-cols-1 md:gird md:grid-cols-4 p-5 max-w-6xl mx-auto'>
       {
         movies?.results?.map(mv=>(
           <Link key={mv.id} href={`/detail/${mv.id}`} rel="preload">
@@ -27,7 +27,10 @@ const search = ({params}) => {
                 />
                 <h1 className='my-5 font-semibold line-clamp-1'>{mv.title}</h1>
                 <p className='mb-5 line-clamp-2'>{mv.overview}</p>
+                <div className='flex justify-between items-center lg:my-0 my-5'>
                 <p className='font-black'>{mv.release_date}</p>
+                <p className='font-extrabold text-violet-800'>Rating : {mv.vote_average.toFixed(1)}</p>
+         </div>
          </div>       
         </Link> 
         ))

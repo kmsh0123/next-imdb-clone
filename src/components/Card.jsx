@@ -20,7 +20,7 @@ const Card = ({mv}) => {
            />
            <h1 className='my-5 font-semibold line-clamp-1'>{mv.title}</h1>
            <p className='mb-5 line-clamp-2'>{mv.overview}</p>
-         <div className='flex justify-between items-center'>
+         <div className='flex justify-between items-center lg:my-0 my-5'>
          <p className='font-black'>{mv.release_date}</p>
            <p className='font-extrabold text-violet-800'>Rating : {mv.vote_average.toFixed(1)}</p>
          </div>
